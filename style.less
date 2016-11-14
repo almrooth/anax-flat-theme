@@ -1,9 +1,63 @@
-/** 
+/**
 * Anax Flat theme.
 */
 @import url(modules.less);
 
+/** --------------------------------------------------------------
+ *  Variables
+ */
 
+ @highlight: #2196F3;
+ @lightgrey: #e0e0e0;
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.site-logo-text,
+.profile {
+    float: left;
+}
+
+.navbar2 {
+    float: right;
+}
+
+.site-logo-text {
+    background-color: @highlight;
+    padding: .75em 1em;
+}
+
+.site-logo-text a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5em;
+}
+
+// navbar main
+.rm-desktop li a {
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@navbarItemHoverColor: @highlight;
+// navbar max
+.rm-max {
+
+    // Place the menu button
+    &.rm-navbar {
+        position: absolute;
+        top: 2em;
+        right: 2em;
+    }
+}
+@maxButtonFontSize: 2em;
 
 /** --------------------------------------------------------------
  *  Logo images
@@ -17,5 +71,78 @@
 .site-logo-text-icon {
     img {
         vertical-align: bottom;
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+
+.breadcrumb-list li {
+    list-style: none;
+    display: inline;
+
+    &:not(:last-child):after {
+        content: " > ";
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.footer {
+    border-top: 1px solid @lightgrey;
+    padding-top: 2em;
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.site-footer {
+    text-align: center;
+}
+
+/** --------------------------------------------------------------
+ *  responsive design
+ */
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+    .rm-max {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .navbar2 {
+        display: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main.has-sidebar-left.has-sidebar {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer-column {
+        width: 100%;
     }
 }
