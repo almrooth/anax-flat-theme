@@ -10,9 +10,29 @@
  @highlight: #2196F3;
  @lightgrey: #e0e0e0;
 
+
+ /** --------------------------------------------------------------
+  *  Globals
+  */
+
+a {
+    text-decoration: none;
+    color: @highlight;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
 /** --------------------------------------------------------------
  *  Header
  */
+
+.site-header {
+    padding: (@magicNumber * 1.5 - 4px) 0;
+    font-family: @fontFamilyHeadings;
+}
 
 .site-logo-text,
 .profile {
@@ -74,6 +94,30 @@
     }
 }
 
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+.flash-wrap {
+    margin-bottom: 8px;
+}
+
+
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+.main {
+    padding: (@magicNumber * 2) 0;
+}
+
+/** --------------------------------------------------------------
+ *  Sidebar
+ */
+
+.sidebar {
+    padding: (@magicNumber * 2) 0;
+}
 
 /** --------------------------------------------------------------
  *  Breadcrumb
@@ -88,23 +132,48 @@
     }
 }
 
-
 /** --------------------------------------------------------------
  *  Footer
  */
 
 .footer {
     border-top: 1px solid @lightgrey;
-    padding-top: 2em;
+    text-align: center;
+    font-family: @fontFamilyHeadings;
+    margin-bottom: 15px;
 
     ul {
         padding: 0;
         list-style: none;
+
+        li {
+            padding: .25em 0;
+        }
     }
 }
 
 .site-footer {
     text-align: center;
+
+    ul li {
+        display: inline-block;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Grid
+ */
+
+body.route-grid {
+    .showGrid();
+}
+
+/** --------------------------------------------------------------
+ *  Typo
+ */
+
+body.route-typography .wrap-all {
+    background: url("../img/grid/horisontal-grid-24.png");
 }
 
 /** --------------------------------------------------------------
@@ -113,36 +182,4 @@
 
 img {
     max-width: 100%;
-}
-
-@media screen and (min-width: 750px) {
-    .rm-max {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 750px) {
-
-    .navbar2 {
-        display: none;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
-    .main.has-sidebar-left.has-sidebar {
-        width: 100%;
-        float: none;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .footer {
-        text-align: center;
-    }
-
-    .footer-column {
-        width: 100%;
-    }
 }
