@@ -9,6 +9,13 @@ Base for my theme to Anax Flat
 
 ##Revisions
 
+3.0.0 (2016-11-21)
+
+Kmom03
+
+* Vertikal and horisontal grid included.
+* New fonts.
+
 2.0.0 (2016-11-14)
 
 The begining of my theme.
