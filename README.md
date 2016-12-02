@@ -13,7 +13,7 @@ Base for my theme to Anax Flat
 
 Kmom03
 
-* Vertikal and horisontal grid included.
+* Vertical and horisontal grid included.
 * New fonts.
 
 2.0.0 (2016-11-14)

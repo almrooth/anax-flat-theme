@@ -1,0 +1,195 @@
+/*------------------------------------------------------------------------------
+* Base theme
+*/
+@import url(modules.less);
+
+
+/*------------------------------------------------------------------------------
+* Variables
+*/
+
+
+/*------------------------------------------------------------------------------
+* Default text styling
+*/
+body {
+    color: #000;
+    opacity: .87;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/*------------------------------------------------------------------------------
+* Images
+*/
+img {
+    max-width: 100%;
+}
+
+
+/*------------------------------------------------------------------------------
+* Wrapper (whole site)
+*/
+
+
+/*------------------------------------------------------------------------------
+* Site header
+*/
+.site-header {
+    font-family: @fontFamilyHeadings;
+    padding: @magicNumber 0;
+
+    .clearfix();
+}
+
+.site-logo-text a{
+    display: inline-block;
+    padding: .75em 1em;
+    margin: .25em 0;
+    text-decoration: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .5em;
+}
+
+
+
+/*------------------------------------------------------------------------------
+* Navbar
+*/
+.navbar2 {
+    text-align: right;
+}
+
+.rm-desktop li a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.rm-max {
+    &.rm-navbar {
+        position: absolute;
+        top: @magicNumber * 1.5;
+        right: @magicNumber * 2;
+    }
+}
+@maxButtonFontSize: 1.5em;
+
+/*------------------------------------------------------------------------------
+* Flash
+*/
+
+/*------------------------------------------------------------------------------
+* Breadcrumb
+*/
+
+.breadcrumb-list li {
+    list-style: none;
+    display: inline;
+
+    &:not(:last-child):after {
+        content: " > ";
+    }
+}
+
+/*------------------------------------------------------------------------------
+* Sidebar
+*/
+
+
+
+/*------------------------------------------------------------------------------
+* Footer
+*/
+
+.footer {
+    text-align: center;
+    font-family: @fontFamilyHeadings;
+
+    & li {
+        list-style: none;
+    }
+}
+
+.site-footer {
+    & li {
+        display: inline;
+        margin: 0 1em;
+    }
+}
+
+
+/*------------------------------------------------------------------------------
+* Special page styling
+*/
+body.route-grid .inner-wrap{
+ .showGrid(@gridWidth, @gridImage);
+}
+
+body.route-typography .inner-wrap {
+ background: url("../img/grid/horisontal-grid-24.png");
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+*   Responsive
+*/
+
+@media screen and (min-width: 579px) {
+    .rm-max {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 865px) {
+
+    .navbar2 {
+        display: none;
+    }
+
+    .site-logo-text {
+        text-align: center;
+        .column(@columns);
+    }
+
+    .navbar2 {
+        .column(@columns);
+        text-align: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main,
+    .after-main {
+        .column(@columns);
+
+        &.has-sidebar {
+            .column(@columns);
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .footer-column {
+        .column(@columns);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .navbar2 {
+        display: none;
+    }
+}

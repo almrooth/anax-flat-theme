@@ -1,0 +1,93 @@
+/*------------------------------------------------------------------------------
+*   Import base theme
+*/
+@import url(base.less);
+
+
+/*------------------------------------------------------------------------------
+*   Variables
+*/
+@colorBackgroundHeader: #FFC413;
+@colorBackgroundBody: #fff;
+@colorBackgroundFooter: #FF5613;
+
+@colorTextMain: black;
+@colorTextHeadings: #FF5613;
+@colorTextLinks: #2196F3;
+@colorTextHeader: #FFC413;
+@colorTextFooter: #FF5613;
+
+@colorGreyDark: #e0e0e0;
+@colorGreyMedium: #f5f5f5;
+@colorGreyLight: #fafafa;
+
+
+
+
+/*------------------------------------------------------------------------------
+*   Colorful theme
+*/
+
+html.colorful {
+    body {
+        background-color: @colorBackgroundBody;
+    }
+
+    a {
+        color: @colorTextLinks;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: @colorTextHeadings;
+    }
+
+    .site-logo-text {
+        & a {
+            background-color: #fff;
+            color: @colorTextLinks;
+        }
+    }
+
+    .rm-desktop li a {
+        color: #fff;
+
+        &:hover {
+            color: @colorTextLinks;
+        }
+    }
+
+    .outer-wrap-header {
+        background-color: @colorBackgroundHeader;
+    }
+
+    .outer-wrap-footer {
+        background-color: @colorBackgroundFooter;
+        color: #fff;
+
+        & a {
+            color: #fff;
+
+            &:hover {
+                color: @colorTextLinks;
+                text-decoration: none;
+            }
+        }
+
+        & h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+
+    .outer-wrap-header {
+        border-bottom: 1px solid @colorGreyDark;
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-after-main {
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-footer {
+        border-top: 1px solid @colorGreyDark;
+    }
+}

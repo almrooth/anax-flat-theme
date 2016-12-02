@@ -2,6 +2,7 @@
 * Anax Flat theme.
 */
 @import url(modules.less);
+@import url(base.less);
 
 /** --------------------------------------------------------------
  *  Variables
@@ -16,23 +17,13 @@
   */
 
 a {
-    text-decoration: none;
     color: @highlight;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 
 /** --------------------------------------------------------------
  *  Header
  */
-
-.site-header {
-    padding: (@magicNumber * 1.5 - 4px) 0;
-    font-family: @fontFamilyHeadings;
-}
 
 .site-logo-text,
 .profile {
@@ -98,9 +89,7 @@ a {
  *  Main
  */
 
-.flash-wrap {
-    margin-bottom: 8px;
-}
+
 
 
 /** --------------------------------------------------------------
@@ -119,67 +108,7 @@ a {
     padding: (@magicNumber * 2) 0;
 }
 
-/** --------------------------------------------------------------
- *  Breadcrumb
- */
-
-.breadcrumb-list li {
-    list-style: none;
-    display: inline;
-
-    &:not(:last-child):after {
-        content: " > ";
-    }
-}
 
 /** --------------------------------------------------------------
  *  Footer
  */
-
-.footer {
-    border-top: 1px solid @lightgrey;
-    text-align: center;
-    font-family: @fontFamilyHeadings;
-    margin-bottom: 15px;
-
-    ul {
-        padding: 0;
-        list-style: none;
-
-        li {
-            padding: .25em 0;
-        }
-    }
-}
-
-.site-footer {
-    text-align: center;
-
-    ul li {
-        display: inline-block;
-    }
-}
-
-/** --------------------------------------------------------------
- *  Grid
- */
-
-body.route-grid {
-    .showGrid();
-}
-
-/** --------------------------------------------------------------
- *  Typo
- */
-
-body.route-typography .wrap-all {
-    background: url("../img/grid/horisontal-grid-24.png");
-}
-
-/** --------------------------------------------------------------
- *  responsive design
- */
-
-img {
-    max-width: 100%;
-}

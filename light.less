@@ -1,0 +1,103 @@
+/*------------------------------------------------------------------------------
+*   Import base theme
+*/
+@import url(base.less);
+
+
+/*------------------------------------------------------------------------------
+*   Variables
+*/
+@themeColorGreyDark: #e0e0e0;
+@themeColorGreyMedium: #f5f5f5;
+@themeColorGreyLight: #fafafa;
+@themeColorWhite: #ffffff;
+
+@themeColorBodyBackground: #fafafa;
+@themeColorMainBackground: #ffffff;
+
+@themeColorHighlight: #2196F3;
+
+
+
+
+/*------------------------------------------------------------------------------
+*   Light theme
+*/
+html.light {
+    body {
+        background-color: @themeColorWhite;
+    }
+
+    .site-logo-text a:hover,
+    .rm-desktop li a:hover {
+        text-decoration: underline;
+    }
+
+    .outer-wrap-header,
+    .outer-wrap-footer {
+        background-color: @themeColorGreyMedium;
+    }
+
+    .outer-wrap-header {
+        border-bottom: 1px solid @themeColorGreyDark;
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-after-main {
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-footer {
+        border-top: 1px solid @themeColorGreyDark;
+    }
+}
+
+
+
+
+/*------------------------------------------------------------------------------
+*   Color theme
+*/
+
+html.color {
+    body {
+        background-color: @themeColorWhite;
+    }
+
+    a {
+        color: @themeColorHighlight;
+    }
+
+    .site-logo-text {
+        & a {
+            background-color: @themeColorHighlight;
+            color: @themeColorWhite;
+        }
+    }
+
+    .rm-desktop li a {
+        color: #000;
+
+        &:hover {
+            color: @themeColorHighlight;
+        }
+    }
+
+    .outer-wrap-header,
+    .outer-wrap-footer {
+        background-color: @themeColorGreyMedium;
+    }
+
+    .outer-wrap-header {
+        border-bottom: 1px solid @themeColorGreyDark;
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-after-main {
+        margin-bottom: @magicNumber - 1px;
+    }
+
+    .outer-wrap-footer {
+        border-top: 1px solid @themeColorGreyDark;
+    }
+}
