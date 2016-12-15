@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------------------
+*   Import base theme
+*/
+@import url(base.less);
+
+
+/*------------------------------------------------------------------------------
+*   Variables
+*/
+@themeColorBodyBackground: #fafafa;
+
+@themeColorHighlight: #2196F3;
+
+
+/*------------------------------------------------------------------------------
+*   Globals
+*/
+
+body {
+    background-color: @themeColorBodyBackground;
+}
+
+a {
+    color: @themeColorHighlight;
+}
+
+@navbarItemHoverColor: @themeColorHighlight;
+
+/*------------------------------------------------------------------------------
+*   Depth
+*/
+html.depth {
+
+    .site-logo-text a,
+    .rm-desktop li a,
+    h1, h2, h3, h4, h5, h6 {
+
+        text-shadow: 1px 1px 0 #e0e0e0,
+                     1px 2px 0 #bdbdbd,
+                     1px 3px 0 #9e9e9e,
+                     1px 4px 0 #757575,
+                     1px 5px 0 #616161,
+                     1px 6px 0 #424242,
+                     1px 6px 0 #212121;
+
+    }
+
+    img {
+        box-shadow: 4px 4px 5px #424242;
+    }
+
+    .navbar2 ul {
+        background-color: @themeColorBodyBackground;
+    }
+}
+
+/*------------------------------------------------------------------------------
+*   Contrast
+*/
+
+html.contrast {
+
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .outer-wrap-header {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .navbar2 ul, {
+        background-color: #fff;
+    }
+
+    .site-logo-text a,
+    .rm-desktop li a,
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+}
+
+
+/*------------------------------------------------------------------------------
+*   lines & framing
+*/
+
+html.texture {
+
+    body {
+        background: url("../img/paven.png");
+    }
+
+    .outer-wrap-header {
+        border-bottom: 1px solid #424242;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .navbar2 ul {
+        background-color: inherit;
+    }
+
+    .rm-desktop li:last-child {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .outer-wrap-flash {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-flash,
+    .inner-wrap-after-main {
+        border-top: 1px solid #424242;
+    }
+
+    .inner-wrap-breadcrumb {
+        padding-bottom: 24px;
+    }
+    .breadcrumb-list ul {
+        margin: 0;
+    }
+
+    .inner-wrap-flash,
+    .inner-wrap-breadcrumb,
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        border-right: 1px solid #424242;
+        border-left: 1px solid #424242;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        border-bottom: 1px solid #424242;
+    }
+
+    .outer-wrap-footer {
+        border-top: 1px solid #424242;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+}
