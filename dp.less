@@ -63,6 +63,7 @@ html.contrast {
     body {
         background-color: #000;
         color: #fff;
+        opacity: 1;
     }
 
     .outer-wrap-header {
@@ -102,7 +103,7 @@ html.texture {
         background-color: inherit;
     }
 
-    .rm-desktop li:last-child {
+    .rm-desktop li ul {
         background-color: rgba(255, 255, 255, 0.75);
     }
 
@@ -139,5 +140,166 @@ html.texture {
     .outer-wrap-footer {
         border-top: 1px solid #424242;
         background-color: rgba(255, 255, 255, 0.75);
+    }
+}
+
+/*------------------------------------------------------------------------------
+*   Gradients
+*/
+html.borders {
+
+    body {
+        background: url("../img/paven.png");
+    }
+
+    .inner-wrap {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .outer-wrap-header,
+    .outer-wrap-main,
+    .outer-wrap-after-main {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-header,
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        border-bottom: 1px solid #000;
+    }
+
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        padding-bottom: 24px;
+    }
+
+    .navbar2 ul {
+        background-color: inherit;
+    }
+
+    .rm-desktop li ul {
+        background-color: #fff;
+    }
+
+    .outer-wrap-flash {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-breadcrumb {
+        padding-bottom: 24px;
+    }
+    .breadcrumb-list ul {
+        margin: 0;
+    }
+}
+
+/*------------------------------------------------------------------------------
+*   Image
+*/
+html.image {
+
+    body {
+        background: url("../img/coding.jpg") no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .inner-wrap {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        background-color: rgba(255, 255, 255, 0.75);
+        max-width: 100%;
+    }
+
+    .outer-wrap-header,
+    .outer-wrap-main,
+    .outer-wrap-after-main {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-header,
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        border-bottom: 1px solid #000;
+    }
+
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        padding-bottom: 24px;
+    }
+
+    .navbar2 ul {
+        background-color: inherit;
+    }
+
+    .rm-desktop li ul {
+        background-color: #fff;
+    }
+
+    .outer-wrap-flash {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-breadcrumb {
+        padding-bottom: 24px;
+    }
+    .breadcrumb-list ul {
+        margin: 0;
+    }
+}
+
+/*------------------------------------------------------------------------------
+*   Gradient
+*/
+html.gradient {
+
+    body {
+        background: url("../img/star.png"), url("../img/star.png"), linear-gradient(270deg, #BBDEFB, #F8BBD0);
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom left, top right;
+
+    }
+
+    .inner-wrap {
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .outer-wrap-header,
+    .outer-wrap-main,
+    .outer-wrap-after-main {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-header,
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        border-bottom: 1px solid #000;
+    }
+
+    .inner-wrap-main,
+    .inner-wrap-after-main {
+        padding-bottom: 24px;
+    }
+
+    .navbar2 ul {
+        background-color: inherit;
+    }
+
+    .rm-desktop li ul {
+        background-color: #fff;
+    }
+
+    .outer-wrap-flash {
+        margin-bottom: 0;
+    }
+
+    .inner-wrap-breadcrumb {
+        padding-bottom: 24px;
+    }
+    .breadcrumb-list ul {
+        margin: 0;
     }
 }
